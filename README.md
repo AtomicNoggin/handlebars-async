@@ -1,20 +1,19 @@
 # Handlebars-Async
 
-Make Handlebars async!
+Make clientside Handlebars async!
+
+an in browser implementation of 
+https://github.com/LoicMahieu/handlebars-async
 
 ## Install
 
-```bash
-npm install handlebars-async
-```
+copy lib/handlebars.js to your server.
+
+include it in your project after the main Handlebars file.
 
 ## Usage
 ```js
-var Handlebars = require('handlebars');
-var handlebarsAsync = require('handlebars-async');
-
 handlebarsAsync(Handlebars);
-
 Handlebars.registerHelper('async', function(arg1) {
   var done = this.async();
 
@@ -30,8 +29,3 @@ tpl(function (err, result) {
   // result == "VALUE"
 });
 ```
-
-
-## Copyright
-
-Copyright (c) 2010 Loïc Mahieu.
